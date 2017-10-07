@@ -1,4 +1,4 @@
-﻿body {
+﻿html, body {
     font-family: Calibri;
     margin: 0;
     padding: 0;
@@ -49,15 +49,6 @@ nav {
     text-align: center;
 }
 
-.myIframe {
-    padding-top:0.2em;
-}
-
-iframe {
-    width:100%;
-    height:480px;
-}
-
 table {
     padding: 10px;
     width: 100%;
@@ -65,15 +56,50 @@ table {
     border-collapse: separate;
 }
 
+
+.myIframe {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+}
+
+iframe {
+    flex: 1 1 auto;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.box .maptop {
+    flex: 0 0 auto;
+    background-color: black;
+}
+
+.box .mapmain {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .myIframe {
+        padding: 0px;
+    }
+}
+
 .time {
-    vertical-align:text-top;
-    text-align:right;
-    padding-right:10px;
-    width:80px;
+    vertical-align: text-top;
+    text-align: right;
+    padding-right: 10px;
+    width: 80px;
 }
 
 .border {
-    height:2px;
-    width:100%;
-    background-color:dodgerblue;
+    height: 2px;
+    width: 100%;
+    background-color: dodgerblue;
 }
