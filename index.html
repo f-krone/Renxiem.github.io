@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Pi</title>
     <link rel="stylesheet" href="Style.css">
+    <script>
+
+    //super secret method
+    function ceasar_shift(str, shift) { 
+        var res = ""; 
+        for (i=0;i < str.length;i++) { 
+            res += String.fromCharCode(str.charCodeAt(i)+ shift)
+        } 
+        return res;
+    } 
+
+    function on_load() {
+        document.getElementById("telLink").addEventListener("click", function(event) {
+                event.preventDefault();
+                var url = ceasar_shift("gssor9..s-ld.inhmbg`s.BmlNqjqeqCRsrur/8h3Jnv", 1);
+                window.location.href = url; 
+            }
+        );
+    }
+</script>
 </head>
-<body>
+<body onload="on_load()">
     <div class="top">
         <center>
             <div class="banner">
@@ -16,7 +36,7 @@
                 <a href="wochenplan.html">Wochenplan</a>
                 <a href="karte.html">Karte</a>
                 <a href="https://www.facebook.com/groups/projectpi2017">Facebook</a>
-                <a href="https://t.me/joinchat/AKhkARDsqsOSbfFVBXO95A">Telegram-Chat</a>
+                <a id="telLink" href="">Telegram-Chat</a>
                 <a href="https://www.dropbox.com/sh/mbtjogkxj579m7j/AAD4ojoOEdbOaiszmNIu0niZa?dl=0">Trailer</a>
             </nav>
         </center>
@@ -30,6 +50,5 @@
         <p>Nach der O-Phase erhaltet ihr unsere <b>Unterstützung für euer Studium</b>: Beantwortung von Fragen, Erfahrungen und ganz besonders Mathekenntnisse! Außerdem werden wir weiterhin etwas gemeinsam unternehmen (<b>Kinobesuchen</b>, <b>Cocktail-Abende</b>, ...)</p>
         <p><b>Wir freuen uns auf euch!</b></p>
     </div>
-
 </body>
 </html>
